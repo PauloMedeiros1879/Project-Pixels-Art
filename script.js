@@ -1,22 +1,24 @@
-let pixelBoard = document.querySelector("#pixel-board");
-function pixels(){
-    for (let i = 0; i < 5; i += 1){
-        let line = document.createElement("div");
-        pixelBoard.appendChild(line);
-        for (let l = 0; l < 5; l +=1) {
-            let pixels = document.createElement("div");
-            pixels.className = "pixel";
-            linha.appendChild(pixel);
-        }
-    }
+function selectPalets() {
+  const paletsColor = document.querySelector('#color-palette');
+  paletsColor.addEventListener('click', function(event) {
+    let selectedPalet = document.querySelector('.selected');
+    selectedPalet.classList.remove('selected');
+    event.target.classList.add('selected');
+  })
 }
-pixels()
+selectPalets()
 
-// function selectColor() {
-//     let select = document.querySelector(".selected");
-//     let pixelsColor = document.getElementsByClassName("color");
-//     pixelsColor.addEventListener("click", function(event)){
-//     pixelsColor.className = event.target.className;
-//     let rmSelect = select.remove.className;
-//     }
-// }
+let pixelSelect = document.getElementsByClassName('pixel');
+let classSelect = document.getElementsByClassName('selected');
+function changePixelColor(){
+  for (let i = 0; i < pixelSelect.length; i += 1){
+    pixelSelect[i].addEventListener('click', function(event){
+      let selectedBackgroundColor = window.getComputedStyle(classSelect[0]);
+      if (!event.target.className.backgroundColor === 'white'){
+        event.target.style.backgroundColor = 'white';
+      } else {event.target.style.backgroundColor = selectedBackgroundColor.getPropertyValue('background-color');
+      }
+    })
+  }
+}
+changePixelColor();
