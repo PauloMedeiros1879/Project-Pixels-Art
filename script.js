@@ -1,3 +1,4 @@
+// cria função para selecionar as cores nos paletes.
 function selectPalets() {
   const paletsColor = document.querySelector('#color-palette');
   paletsColor.addEventListener('click', function(event) {
@@ -8,6 +9,18 @@ function selectPalets() {
 }
 selectPalets()
 
+// cria 25 pixels
+function creatPixels(){
+  const pixelsBoard = document.getElementById('pixel-board');
+for(let count = 0; count < 25; count += 1){
+  const pixel = document.createElement('div');
+  pixel.className = "pixel";
+  pixelsBoard.appendChild(pixel);
+  }
+}
+creatPixels()
+
+// cria uma função para mudar a cor
 const pixelSelect = document.getElementsByClassName('pixel');
 const classSelect = document.getElementsByClassName('selected');
 function changePixelColor(){
@@ -23,6 +36,7 @@ function changePixelColor(){
 }
 changePixelColor();
 
+// cria um botão de limpeza
 function limparPixels() {
   const listPixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < listPixels.length; i += 1) {
