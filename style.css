@@ -1,3 +1,6 @@
+body{
+    background-color: yellow;
+}
 #color-pallete{
     width: 200px;
     height: 200px;
@@ -15,24 +18,46 @@
     width: 30px;
     height: 30px;
 }
+.black:hover{
+ width: 35px;
+ height: 35px;
+ border: 2px solid white;
+}
 .red{
     background-color: red;
     border: 1px solid black;
     width: 30px;
     height: 30px;
 }
+.red:hover{
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+   }
+
 .blue{
     background-color: blue;
     border: 1px solid black;
     width: 30px;
     height: 30px;
 }
+.blue:hover{
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+   }
 .green{
     background-color: green;
     border: 1px solid black;
     width: 30px;
     height: 30px;
 }
+.green:hover{
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+   }
+
 #pixel-board{
     margin-right: 80%;
 }
@@ -46,6 +71,13 @@
     background-color: white;
 }
 
-/* #clear-board{
-
-} */
+#clear-board{
+ background-color: white;
+ width: 261px;
+ font-family: monospace;
+}
+#clear-board:hover{
+    background-color: violet;
+    color: darkblue;
+    font-style: oblique;
+}
