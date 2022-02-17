@@ -1,5 +1,10 @@
 body{
+    border: 100%;
     background-color: yellow;
+}
+#organziar-title{
+    text-align: center;
+    background-color: cadetblue;
 }
 #color-pallete{
     width: 200px;
@@ -93,7 +98,7 @@ body{
 
 #clear-board{
  background-color: white;
- width: 261px;
+ width: 100px;
  font-family: monospace;
 }
 #clear-board:hover{
