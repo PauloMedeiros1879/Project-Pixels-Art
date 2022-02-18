@@ -37,10 +37,30 @@ function changePixelColor(){
 changePixelColor();
 
 // cria um botão de limpeza
-function limparPixels() {
+function cleanPixels() {
   const listPixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < listPixels.length; i += 1) {
     listPixels[i].style.backgroundColor = 'rgba(255, 255, 255)';
   }
 }
-document.querySelector('#clear-board').addEventListener('click', limparPixels);
+document.querySelector('#clear-board').addEventListener('click', cleanPixels);
+
+// botao para gerar pixels com a quantidade indicada
+// function buttonGeneretor(){
+//   const inputElement = getElementById('board-size');
+//   const buttonVQV = getElementById('generate-board');
+//   const pixel = document.querySelectorAll('.pixel');
+//   const pixelsBoard = document.getElementById('pixel-board');
+//   pixel.forEach(function (pixel) {
+//     pixel.addEventListener('click', pixel.remove)
+//   });
+//   buttonVQV.addEventListener('click', function(){
+//     for (let count = 0; count < 25; count += 1){
+//       const pixels = document.createElement('div');
+//       pixels.className = "pixel";
+//       pixelsBoard.appendChild(pixel);
+//     }
+//     inputElement.value = '';
+//   })
+// }
+// buttonGeneretor();
